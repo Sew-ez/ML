@@ -4,4 +4,6 @@
 
 ### Dev mode
 
+#### To run api in dev mode you'll need to execute
+
 #### - fastapi dev api-main.py
