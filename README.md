@@ -1,9 +1,5 @@
-# Machine Learning part of Sewez
-
-## Running API
-
-### Dev mode
-
-#### To run api in dev mode you'll need to execute
-
-#### - fastapi dev api-main.py
+# ML Code for Sewez
+## Datasets Used
+### Gender Classification by Name
+- Indonesian Names: https://www.kaggle.com/datasets/dionisiusdh/indonesian-names
+- English Indian Names: https://www.kaggle.com/datasets/kanchitank/indian-names-male-and-female
