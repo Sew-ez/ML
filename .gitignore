@@ -1,5 +1,6 @@
 sindhu-env/
 Coursera/
+LogoDetectorModel/preTrainedModel
 
 ### Django ###
 *.log
