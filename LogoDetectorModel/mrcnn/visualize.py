@@ -153,7 +153,7 @@ def display_instances(image, boxes, masks, class_ids, class_names,
             # ax.text(x1, y1 + 8, caption,
             #         color='w', size=11, backgroundcolor="none")
             ax.text(x1, y1 + 8, caption,
-                    color='w', size=11, backgroundcolor="darkcyan")
+                    color='w', size=11, backgroundcolor="teal")
 
         # Mask
         mask = masks[:, :, i]
@@ -260,7 +260,7 @@ def draw_rois(image, rois, refined_rois, mask, class_ids, class_names, limit=10)
             # ax.text(rx1, ry1 + 8, "{}".format(label),
             #         color='w', size=11, backgroundcolor="none")
             ax.text(rx1, ry1 + 8, "{}".format(label),
-                    color='b', size=11, backgroundcolor="darkcyan")
+                    color='b', size=11, backgroundcolor="teal")
 
             # Mask
             m = utils.unmold_mask(mask[id], rois[id]
@@ -446,7 +446,7 @@ def draw_boxes(image, boxes=None, refined_boxes=None,
             if refined_boxes is not None:
                 y1, x1, y2, x2 = ry1, rx1, ry2, rx2
             ax.text(x1, y1, caption, size=11, verticalalignment='top',
-                    color='w', backgroundcolor="none",
+                    color='w', backgroundcolor="teal",
                     bbox={'facecolor': color, 'alpha': 0.5,
                           'pad': 2, 'edgecolor': 'none'})
 
