@@ -1,7 +1,7 @@
-import mrcnn2
-import mrcnn2.config
-import mrcnn2.model
-import mrcnn2.visualize
+import mrcnn
+import mrcnn.config
+import mrcnn.model
+import mrcnn.visualize
 import cv2 
 import os
 
@@ -10,7 +10,7 @@ import os
 
 CLASS_NAMES = ['BG', 'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush']
 
-class SimpleConfig(mrcnn2.config.Config):
+class SimpleConfig(mrcnn.config.Config):
     # Give the configuration a recognizable name
     NAME = "coco_inference"
     
@@ -23,7 +23,7 @@ class SimpleConfig(mrcnn2.config.Config):
 
 # Initialize the Mask R-CNN model for inference and then load the weights.
 # This step builds the Keras model architecture.
-model = mrcnn2.model.MaskRCNN(mode="inference", 
+model = mrcnn.model.MaskRCNN(mode="inference", 
                              config=SimpleConfig(),
                              model_dir=os.getcwd())
 
@@ -44,7 +44,7 @@ r = model.detect([image], verbose=0)
 r = r[0]
 
 # Visualize the detected objects.
-mrcnn2.visualize.display_instances(image=image, 
+mrcnn.visualize.display_instances(image=image, 
                                   boxes=r['rois'], 
                                   masks=r['masks'], 
                                   class_ids=r['class_ids'], 
