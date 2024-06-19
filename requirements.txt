@@ -1,3 +1,5 @@
 imgaug
 tensorrt
-skimage
+scikit-image
+opencv-python
+tensorflow
